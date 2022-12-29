@@ -7,11 +7,12 @@ jobs:
     name: test one
     runs-on: ubuntu-latest
     steps:
-      -name: checkout code
-      -uses: actions/checkout@v2
+      - name: checkout code
+      - uses: actions/checkout@v2
+      
     steps:
-      -name: superlint
-      -uses: actions/super-linter@v3
-      env:
-        DEFAULT_BRANCH: main
-        GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
+      - name: superlint
+      - uses: actions/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secret.GITHUB_TOKEN }}
